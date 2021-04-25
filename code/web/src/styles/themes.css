@@ -1,0 +1,24 @@
+#root {
+  --cBackground: #FFFFFF;
+  --cForeground: #EEEEEE;
+  --cFont: #303030;
+  --cFontInverse: #FFFFFF;
+
+  --cPeachPrimary: #E4410E;
+  --cPeachSecondary: #F4511E;
+  --cAccentPrimary: #2F5597;
+  --cAccentSecondary: #337AC3;
+
+  --cDarkPrimary: #212121;
+  --cDarkSecondary: #181818;
+  --cGreenPrimary: #00C853;
+  --cGreenSecondary: #E5F9ED;
+  --cCyanPrimary: #00BFA5;
+  --cCyanSecondary: #E5F8F6;
+  --cBluePrimary: #448AFF;
+  --cBlueSecondary: #ECF3FF;
+  --cPurplePrimary: #651FFF;
+  --cPurpleSecondary: #EFE8FF;
+  --cOrangePrimary: #FF9100;
+  --cOrangeSecondary: #FFF4E5;
+}

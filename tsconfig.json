@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "webSrc/*": [ "code/web/src/*" ],
+      "serverSrc/*": [ "code/server/src/*" ],
+      "shared/*": [ "code/shared/*" ],
+      "~/*": ["./*"]
+    },
+    "target": "es6",
+    "module": "commonjs",
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "types": [
+      "node",
+      "mocha"
+    ],
+    "typeRoots": [
+      "node_modules/@types",
+      "code/@types"
+    ],
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "lib": [
+      "es6",
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "isolatedModules": true
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "include": [
+    "code",
+    "bin"
+  ]
+}

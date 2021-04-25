@@ -1,0 +1,36 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Master's Thesis",
+    "description": "Master's Thesis at MFF UK",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:{port}",
+      "description": "Local server",
+      "variables": {
+        "port": {
+          "default": "8080"
+        }
+      }
+    }
+  ],
+  "paths": {},
+  "components": {
+    "securitySchemes": {},
+    "responses": {},
+    "parameters": {
+      "xhrHeader": {
+        "in": "header",
+        "name": "X-Requested-With",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "default": "XMLHttpRequest"
+        }
+      }
+    },
+    "schemas": {}
+  }
+}
