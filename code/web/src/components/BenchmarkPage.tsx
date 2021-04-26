@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { API } from 'shared/constants'
 import { apiClient } from 'webSrc/apiClient'
 
-export const BenchmarkPage = () => (
-  <>
-    <h2>BenchmarkPage</h2>
+export const BenchmarkPage = () => {
+  const [gitInput, setGitInput] = useState<string>('')
 
-    <button onClick={() => apiClient.post(API.BENCHMARK)}> BENCHMARK </button>
-  </>
-)
+  return (
+    <>
+      <h2>BenchmarkPage</h2>
+
+      <input name="git" placeholder="git repository" onChange={({ target: { value } }) => setGitInput(value)} />
+      <button onClick={() => apiClient.post(API.BENCHMARK, { git: gitInput })}> BENCHMARK </button>
+    </>
+  )
+}

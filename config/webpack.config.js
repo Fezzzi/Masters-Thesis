@@ -38,6 +38,11 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     port: process.env.DEV_PORT ?? 8081,
+    host: process.env.DOCKER_ENV ? '0.0.0.0' : 'localhost',
+    watchOptions: {
+      poll: 1000,
+      aggregateTimeout: 1000
+    },
   },
 
   module: {

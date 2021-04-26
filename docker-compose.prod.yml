@@ -1,0 +1,5 @@
+services:
+  app:
+    command: bash -c "npm run build && npm start"
+    ports:
+      - "8000:8000"

@@ -1,0 +1,16 @@
+services:
+  app:
+    build: .
+    command: npm run dev
+    ports:
+      - "8000:8000"
+      - "8001:8001"
+    volumes:
+      - ./code/server/logs/:/src/code/server/logs/:z
+      - ./benchmarks/:/src/benchmarks/:z
+      - ./dist/:/src/dist/:z
+      - .:/src/:ro
+      - nodemodules:/src/node_modules
+
+volumes:
+  nodemodules: {}

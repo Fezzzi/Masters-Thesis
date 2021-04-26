@@ -10,14 +10,14 @@ export const BrowsePage = () => {
     console.log('Browse data')
     apiClient.get(API.BROWSE)
       .then(({ data }) => setData(data))
-  })
+  }, [])
 
   return (
     <>
       <h2>Browse Page</h2>
 
       <h3>Data:</h3>
-      {data}
+      {JSON.stringify(data)}
     </>
   )
 }
