@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: true, limit: '3mb' }))
 
 // Setup access logging
 app.use(morgan(':remote-addr - :remote-user ":method :url" :status :response-time ms', {
-  skip: (req, res) => { return req.method === 'OPTIONS' },
+  skip: req => req.method === 'OPTIONS',
   stream: {
     write: (str: string) => Logger(LOGS.ACCESS_LOG, str),
   },
