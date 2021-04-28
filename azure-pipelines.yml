@@ -1,0 +1,16 @@
+trigger:
+- develop
+
+pool:
+  vmImage: ubuntu-latest
+
+jobs:
+- deployment: DeployWeb
+  displayName: deploy Web App
+  # creates an environment if it doesn't exist
+  environment: 'Dev'
+  strategy:
+    runOnce:
+      deploy:
+        steps:
+        - script: docker-compose up --build
