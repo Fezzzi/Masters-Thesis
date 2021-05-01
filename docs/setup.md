@@ -24,4 +24,4 @@
 
 | Previous Page | Next Page |
 |:-------------:|:-----:|
-| <sup>[🠔 Back](./readme.md)</sup> | <sup>[Workflow](./environments.md)</sup> |
+| <sup>[🠔 Back](./readme.md)</sup> | <sup>[Environments](./environments.md)</sup> |
