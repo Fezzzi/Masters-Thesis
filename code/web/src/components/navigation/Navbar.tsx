@@ -96,7 +96,6 @@ const PageNavbar = styled.div<{ scrolled: boolean; bkg: string }>`
   transition: height 0.4s, margin 0.4s;
 
   @media (max-width: ${TABLET_WIDTH}px) {
-    margin: 0 10px;
     padding: 0 10px;
   } 
 `

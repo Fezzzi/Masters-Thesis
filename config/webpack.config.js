@@ -95,7 +95,7 @@ module.exports = {
       },
     }),
     new webpack.DefinePlugin({
-      'process.env.API_PORT': process.env.API_PORT ?? 8080,
+      'process.env.API_PORT': process.env.API_PORT,
       'process.env.DEBUG': Boolean(process.env.DEBUG),
     }),
   ],
