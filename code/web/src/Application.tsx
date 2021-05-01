@@ -24,7 +24,7 @@ const PageContent = styled.main`
   transition: margin 0.4s;
   
   @media (max-width: ${TABLET_WIDTH}px) {
-    margin: 20px 10px;
+    margin: ${DESIGN.NAVBAR_HEIGHT + 10}px 10px 10px;
   } 
 `
 

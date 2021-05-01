@@ -17,12 +17,16 @@ export default () => {
     }
   })
 
-  router.use(`/${API.BROWSE}`, browseRouter())
-  router.use(`/${API.BENCHMARK}`, benchmarkRouter())
+  const apiRouter = express.Router()
 
-  router.all(/.*/, (_req, res) => {
+  apiRouter.use(`/${API.BROWSE}`, browseRouter())
+  apiRouter.use(`/${API.BENCHMARK}`, benchmarkRouter())
+
+  apiRouter.all(/.*/, (_req, res) => {
     res.status(404).send('Not Found')
   })
+
+  router.use('/api', apiRouter)
 
   return router
 }
