@@ -26,14 +26,16 @@ app.use(morgan(':remote-addr - :remote-user ":method :url" :status :response-tim
   },
 }))
 
-// Setup CORS policy
-process.env.NODE_ENV !== 'production' && app.use(
-  cors({
-    origin: `http://localhost:${process.env.DEV_PORT ?? 8081}`,
-    credentials: true,
-    optionsSuccessStatus: 200,
-  })
-)
+// Setup CORS policy only in dev environment
+if (process.env.NODE_ENV !== 'production') {
+  app.use(
+    cors({
+      origin: `http://localhost:${process.env.DEV_PORT ?? 8081}`,
+      credentials: true,
+      optionsSuccessStatus: 200,
+    })
+  )
+}
 
 // Serve static assets
 app.use(express.static(path.resolve('./dist')))
