@@ -1,0 +1,20 @@
+services:
+  git-computation-container:
+    build:
+      context: .
+      args:
+        - IMAGE
+        - CLONE_CMD
+    image: git-computation-container
+    command: dotnet run
+    volumes:
+      - type: volume
+        source: cc-output
+        target: /src/output/
+        volume:
+          nocopy: true
+
+volumes:
+  cc-output:
+    external: true
+    name: masters-thesis_cc-output

@@ -1,4 +1,4 @@
-# Masters-Thesis
+# Peachmarks
 Master's thesis at MFF UK
 
 ### About
@@ -16,10 +16,11 @@ or use external service for that. Finally, server will compose possible `etw`
 results with any other artifacts and parse them into custom structure recognized
 by the clients.
 
-**Latest staging environment can be found [here](https://peachmarks-develop.herokuapp.com/)**.
+**The latest staging environment can be found [here](https://peachmarks-develop.herokuapp.com/)**.
 
 ### Build status
-**develop**  \
+**develop**
+
 ![develop](https://github.com/Fezzzi/Masters-Thesis/actions/workflows/main.yml/badge.svg?branch=develop)
 
 #### [More documentation 🠖](./docs/readme.md)

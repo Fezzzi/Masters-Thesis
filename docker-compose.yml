@@ -1,6 +1,7 @@
 services:
   app:
     build: .
+    image: app-dev
     command: npm run dev
     ports:
       - "8000:8000"
@@ -10,7 +11,15 @@ services:
       - ./benchmarks/:/src/benchmarks/:z
       - ./dist/:/src/dist/:z
       - .:/src/:ro
+      - /var/run/docker.sock:/var/run/docker.sock
       - nodemodules:/src/node_modules
+      # We want the content of shared output dir for CCs to be empty
+      - type: volume
+        source: cc-output
+        target: /src/bin/output/
+        volume:
+          nocopy: true
 
 volumes:
   nodemodules: {}
+  cc-output: {}
